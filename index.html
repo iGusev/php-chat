@@ -5,18 +5,28 @@
     <meta charset="UTF-8">
     <title>Chat Challenge</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<form action="save.php">
-    <label for="name">Имя</label>
-    <input type="text" id="name" name="name" />
-    <label for="text">Сообщение</label>
-    <textarea id="text" name="text"></textarea>
-    <input type="submit" value="Послать"/>
-</form>
-
-<div class="messages">
-    <iframe src="chat.php" width="468" height="60" align="left"></iframe>
+<div class="container">
+    <div class="row">
+        <div class="messages">
+            <iframe src="chat.php"></iframe>
+        </div>
+    </div>
+    <div class="row">
+        <form role="form" action="save.php">
+            <div class="form-group">
+                <input type="text" class="form-control" name="name" placeholder="Ваше имя">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="text" rows="3" placeholder="Сообщение"></textarea>
+            </div>
+            <div class="form-group">
+                <input type="submit" class="btn btn-default" value="Послать"/>
+            </div>
+        </form>
+    </div>
 </div>
 </body>
 </html>
