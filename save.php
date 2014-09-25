@@ -9,6 +9,6 @@ if($_REQUEST['name'] && $_REQUEST['text']) {
     $out = ob_get_clean();
 
     file_put_contents('text', $out, FILE_APPEND);
-    $_SESSION['name'] = strip_tags($_REQUEST['name']);
+    $_SESSION['name'] = $name;
 }
 header('Location: '.$_SERVER['HTTP_REFERER']);
