@@ -10,7 +10,6 @@
         .container {
             width: 600px;
         }
-
         .chat-messages {
             margin-top: 20px;
             height: 600px;
@@ -36,7 +35,7 @@
         <form role="form" action="save.php">
             <div class="form-group">
                 <input type="text" class="form-control" name="name" placeholder="Ваше имя"
-                       value="<?php $_SESSION['name']; ?>">
+                       value="<?php echo $_SESSION['name']; ?>">
             </div>
             <div class="input-group">
                 <input type="text" class="form-control" name="text" placeholder="Сообщение">

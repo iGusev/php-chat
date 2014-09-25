@@ -1,4 +1,5 @@
 <?php
+session_start();
 if($_REQUEST['name'] && $_REQUEST['text']) {
     $name = strip_tags($_REQUEST['name']);
     $text = strip_tags($_REQUEST['text']);
