@@ -10,18 +10,32 @@
         .container {
             width: 600px;
         }
+
         .chat-messages {
             margin-top: 20px;
             height: 600px;
+            overflow: auto;
         }
+        .wrapper {
+            position: relative;
+            height: 10000px;
+            overflow: hidden;
+        }
+        .full-height: { height: 10000px; }
 
         .chat-form {
             height: 180px;
         }
+        .messages {
+            position: absolute;
+            top: 0;
+            opacity: 0.2;
+            height: 100%;
+        }
 
         iframe {
-            width: 100%;
-            height: 100%;
+            width: 600px;
+            height: 600px;
             border: 0;
         }
     </style>
@@ -29,10 +43,20 @@
 <body>
 <div class="container">
     <div class="row chat-messages">
-        <iframe class="messages" src="chat.php"></iframe>
+        <div class="wrapper">
+            <div class="full-height"></div>
+            <iframe name="result" class="messages" src="chat.php?s=1"></iframe>
+            <iframe class="messages" src="chat.php?s=1"></iframe>
+            <iframe class="messages" src="chat.php?s=2"></iframe>
+            <iframe class="messages" src="chat.php?s=3"></iframe>
+            <iframe class="messages" src="chat.php?s=4"></iframe>
+            <iframe class="messages" src="chat.php?s=5"></iframe>
+            <iframe class="messages" src="chat.php?s=6"></iframe>
+            <iframe class="messages" src="chat.php?s=7"></iframe>
+        </div>
     </div>
     <div class="row chat-form">
-        <form role="form" action="save.php">
+        <form role="form" target="result" action="save.php">
             <div class="form-group">
                 <input type="text" class="form-control" name="name" placeholder="Ваше имя"
                        value="<?php echo $_SESSION['name']; ?>">

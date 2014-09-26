@@ -3,9 +3,12 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <meta http-equiv="refresh" content="2">
+    <meta http-equiv="refresh" content="<?php echo $_REQUEST['s']; ?>">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
+        body, html {
+            height: 100%;
+        }
         .chat-body {
             margin-bottom: 10px;
             padding-bottom: 5px;
